@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0A0A0B;
+  color: #FAFAFA;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #23252B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EC8922;
+}
+
+/* Watermark typography */
+.watermark-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(8rem, 20vw, 24rem);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.02);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Section Title Pill / Index */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #EC8922;
+}
+
+.section-tag-num {
+  color: #EC8922;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.section-tag-divider {
+  width: 16px;
+  height: 1.5px;
+  background-color: rgba(236, 137, 34, 0.5);
+}
+
+.section-tag-label {
+  color: #969BA7;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+/* Card Glow Effect */
+.card-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.card-glass:hover {
+  border-color: rgba(236, 137, 34, 0.35);
+  box-shadow: 0 0 30px rgba(236, 137, 34, 0.08);
+}
+
+/* Floating animation for Hero image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Revolving border stroke animation */
+@keyframes spin-revolve {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-revolve {
+  animation: spin-revolve 4s linear infinite;
+  will-change: transform;
+}
+
