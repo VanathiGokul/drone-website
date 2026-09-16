@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import cavinLogo from '../assets/cavin_logo.svg';
+import TurnstileWidget from './TurnstileWidget';
 
 const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT || 'https://formsubmit.co/ajax/jainaressh.b@cavininfotech.com';
 
@@ -12,6 +13,9 @@ export default function AutomationModal({ isOpen, onClose }) {
     interestedIn: 'Both', // Drone | AMR | Both
     _honey: '', // Honeypot field for bot mitigation
   });
+
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -47,6 +51,12 @@ export default function AutomationModal({ isOpen, onClose }) {
     const phoneDigits = trimmedPhone.replace(/\D/g, '');
     if (phoneDigits.length < 7 || trimmedPhone.length > 20) {
       setErrorMessage('Please enter a valid phone number (minimum 7 digits).');
+      return false;
+    }
+
+    // Cloudflare Turnstile verification check
+    if (!turnstileToken) {
+      setErrorMessage('Please complete the security verification below.');
       return false;
     }
 
@@ -90,6 +100,7 @@ export default function AutomationModal({ isOpen, onClose }) {
           'Work Email': formData.workEmail.trim(),
           'Mobile Number': formData.mobileNumber.trim(),
           'Interested In': formData.interestedIn === 'Both' ? 'Drone & AMR' : formData.interestedIn,
+          'cf-turnstile-response': turnstileToken,
           '_subject': `New Automation Inquiry: ${formData.fullName.trim()} (${formData.organization.trim()})`,
           '_template': 'table',
           '_captcha': 'false',
@@ -103,9 +114,13 @@ export default function AutomationModal({ isOpen, onClose }) {
         setSubmitted(true);
       } else {
         setErrorMessage('Unable to submit inquiry at this moment. Please try again or reach out directly.');
+        setTurnstileToken('');
+        turnstileRef.current?.reset();
       }
     } catch {
       setErrorMessage('Network connection error. Please verify your internet and try again.');
+      setTurnstileToken('');
+      turnstileRef.current?.reset();
     } finally {
       setLoading(false);
     }
@@ -115,6 +130,8 @@ export default function AutomationModal({ isOpen, onClose }) {
     setSubmitted(false);
     setLoading(false);
     setErrorMessage('');
+    setTurnstileToken('');
+    turnstileRef.current?.reset();
     setFormData({
       fullName: '',
       workEmail: '',
@@ -319,6 +336,27 @@ export default function AutomationModal({ isOpen, onClose }) {
                     className="w-full bg-[#141519] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-[#52535A] focus:outline-none focus:border-[#EC8922] focus:ring-1 focus:ring-[#EC8922] transition-all font-space"
                   />
                 </div>
+              </div>
+
+              {/* Cloudflare Turnstile Security Verification */}
+              <div className="pt-1 flex flex-col items-center">
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  action="automation_inquiry"
+                  theme="dark"
+                  onSuccess={(token) => {
+                    setTurnstileToken(token);
+                    setErrorMessage('');
+                  }}
+                  onError={() => {
+                    setTurnstileToken('');
+                    setErrorMessage('Security verification failed. Please try again.');
+                  }}
+                  onExpire={() => {
+                    setTurnstileToken('');
+                    setErrorMessage('Security verification expired. Please verify again.');
+                  }}
+                />
               </div>
 
               {/* Catchy CTA Button */}
