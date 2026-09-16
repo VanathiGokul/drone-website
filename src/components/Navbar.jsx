@@ -64,17 +64,6 @@ export default function Navbar({ activeSection, onNavigate, onOpenContact }) {
             }`} />
           </button>
 
-          <button
-            onClick={() => onNavigate('footer')}
-            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
-              activeSection === 'footer' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
-            }`}
-          >
-            Footer
-            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
-              activeSection === 'footer' ? 'w-full' : 'w-0 group-hover:w-full'
-            }`} />
-          </button>
         </nav>
 
         {/* Contact CTA with Revolving Border Stroke */}

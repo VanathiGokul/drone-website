@@ -28,7 +28,7 @@ export default function App() {
   // Update active navbar indicator on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['drone', 'drone-projects', 'amr', 'amr-projects', 'footer'];
+      const sections = ['drone', 'drone-projects', 'amr', 'amr-projects'];
       const scrollPos = window.pageYOffset + 250;
 
       for (let i = sections.length - 1; i >= 0; i--) {
