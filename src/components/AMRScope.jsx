@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import amrScopeBg from '../assets/amr_scope_bg.png';
-import amrScopeIndoorAssistant from '../assets/amr_scope_indoor_assistant.png';
+import amrScopeBg from '../assets/amr_scope_bg.webp';
+import amrScopeIndoorAssistant from '../assets/amr_scope_indoor_assistant.webp';
 
 export default function AMRScope() {
   const [activeTab, setActiveTab] = useState(0);
@@ -117,6 +117,8 @@ export default function AMRScope() {
               <img
                 src={cap.image}
                 alt={cap.heading}
+                loading="lazy"
+                decoding="async"
                 className={`w-full h-full ${cap.imagePosition || 'object-cover object-center'}`}
               />
               {/* Linear overlay matching Drone Scope (+10% opacity and subtle top ambient contrast) */}

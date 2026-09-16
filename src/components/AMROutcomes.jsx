@@ -1,10 +1,10 @@
 import React from 'react';
-import amrOutcomeAgv from '../assets/amr_outcome_agv.png';
-import amrOutcomeIsaac from '../assets/amr_outcome_isaac.png';
-import amrOutcomeRover from '../assets/amr_outcome_rover.png';
-import amrOutcomeSecurity from '../assets/amr_outcome_security.jpg';
-import amrOutcomeDelivery from '../assets/amr_outcome_delivery.png';
-import amrOutcomeIndoorAssistance from '../assets/amr_outcome_indoor_assistance.png';
+import amrOutcomeAgv from '../assets/amr_outcome_agv.webp';
+import amrOutcomeIsaac from '../assets/amr_outcome_isaac.webp';
+import amrOutcomeRover from '../assets/amr_outcome_rover.webp';
+import amrOutcomeSecurity from '../assets/amr_outcome_security.webp';
+import amrOutcomeDelivery from '../assets/amr_outcome_delivery.webp';
+import amrOutcomeIndoorAssistance from '../assets/amr_outcome_indoor_assistance.webp';
 
 export default function AMROutcomes() {
   const outcomes = [
@@ -114,6 +114,8 @@ export default function AMROutcomes() {
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-90 pointer-events-none" />

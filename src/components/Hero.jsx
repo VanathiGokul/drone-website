@@ -1,6 +1,6 @@
 import React from 'react';
-import heroDrone from '../assets/hero_drone.png';
-import heroAmr from '../assets/hero_amr.png';
+import heroDrone from '../assets/hero_drone.webp';
+import heroAmr from '../assets/hero_amr.webp';
 
 export default function Hero() {
   return (
@@ -37,6 +37,7 @@ export default function Hero() {
                 <img
                   src={heroDrone}
                   alt="Autonomous Drone on pedestal"
+                  decoding="async"
                   className="w-full h-full object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] block select-none"
                 />
               </div>
@@ -48,6 +49,7 @@ export default function Hero() {
                 <img
                   src={heroAmr}
                   alt="Autonomous Mobile Robot (AMR) on pedestal"
+                  decoding="async"
                   className="w-full h-full object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] block select-none"
                 />
               </div>

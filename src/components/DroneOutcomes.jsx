@@ -1,10 +1,10 @@
 import React from 'react';
-import droneOutcomeDesign from '../assets/drone_outcome_design.jpg';
-import droneOutcomeAds from '../assets/drone_outcome_ads.png';
-import droneOutcomeTethered from '../assets/drone_outcome_tethered.jpg';
-import droneOutcomeLqr from '../assets/drone_outcome_lqr.png';
-import droneOutcomeLidar from '../assets/drone_outcome_lidar.jpg';
-import droneOutcomeFirefighting from '../assets/drone_outcome_firefighting.png';
+import droneOutcomeDesign from '../assets/drone_outcome_design.webp';
+import droneOutcomeAds from '../assets/drone_outcome_ads.webp';
+import droneOutcomeTethered from '../assets/drone_outcome_tethered.webp';
+import droneOutcomeLqr from '../assets/drone_outcome_lqr.webp';
+import droneOutcomeLidar from '../assets/drone_outcome_lidar.webp';
+import droneOutcomeFirefighting from '../assets/drone_outcome_firefighting.webp';
 
 export default function DroneOutcomes() {
   const outcomes = [
@@ -117,6 +117,8 @@ export default function DroneOutcomes() {
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-90 pointer-events-none" />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import droneScopeBg from '../assets/drone_scope_bg.jpg';
-import droneScopeFirefighting from '../assets/drone_scope_firefighting.jpg';
-import droneScope3dMapping from '../assets/drone_scope_3dmapping.jpg';
+import droneScopeBg from '../assets/drone_scope_bg.webp';
+import droneScopeFirefighting from '../assets/drone_scope_firefighting.webp';
+import droneScope3dMapping from '../assets/drone_scope_3dmapping.webp';
 
 export default function DroneScope() {
   const [activeTab, setActiveTab] = useState(0);
@@ -129,6 +129,8 @@ export default function DroneScope() {
               <img
                 src={cap.image}
                 alt={cap.heading}
+                loading="lazy"
+                decoding="async"
                 className={`w-full h-full ${cap.imagePosition || 'object-cover object-center'}`}
               />
               {/* Linear overlay with +10% opacity and subtle top ambient contrast for clear readability */}
