@@ -82,8 +82,8 @@ body {
   box-shadow: 0 0 30px rgba(236, 137, 34, 0.08);
 }
 
-/* Floating animation for Hero image */
-@keyframes float {
+/* Floating animation for Hero Drone & AMR (Silky smooth harmonic wave: Drone floats first, AMR rises as Drone begins descent) */
+@keyframes float-smooth {
   0%, 100% {
     transform: translateY(0px);
   }
@@ -92,9 +92,19 @@ body {
   }
 }
 
-.animate-float {
-  animation: float 5s ease-in-out infinite;
+.animate-float-drone {
+  animation: float-smooth 5s ease-in-out infinite;
   will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-float-amr {
+  animation: float-smooth 5s ease-in-out infinite;
+  animation-delay: 2.5s;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Revolving border stroke animation */

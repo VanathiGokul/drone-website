@@ -28,13 +28,17 @@ export default function App() {
   // Update active navbar indicator on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const amrEl = document.getElementById('amr');
-      if (amrEl) {
-        const rect = amrEl.getBoundingClientRect();
-        if (rect.top <= 200) {
-          setActiveSection('amr');
-        } else {
-          setActiveSection('drone');
+      const sections = ['drone', 'drone-projects', 'amr', 'amr-projects', 'footer'];
+      const scrollPos = window.pageYOffset + 250;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPos >= top) {
+            setActiveSection(sections[i]);
+            break;
+          }
         }
       }
     };

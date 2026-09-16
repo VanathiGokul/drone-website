@@ -13,7 +13,7 @@ export default function AMRScope() {
       heading: 'Site Surveillance',
       description: 'Self-navigating robots patrol floors, warehouses, and restricted zones - spotting unattended objects, badge anomalies, and after-hours movement.',
       callout: 'Every alert reaches your team with live video, before an incident becomes a loss.',
-      image: amrScopeBg,
+      image: amrScopeIndoorAssistant,
       imagePosition: 'object-cover object-center',
     },
     {
@@ -22,7 +22,7 @@ export default function AMRScope() {
       heading: 'Indoor AI Assistance',
       description: 'A mobile AI companion that welcomes visitors, manages check-in, guides guests, and answers facility questions instantly.',
       callout: 'Professional, multilingual assistance available every hour of every day.',
-      image: amrScopeIndoorAssistant,
+      image: amrScopeBg,
       imagePosition: 'object-cover object-center',
     },
   ];

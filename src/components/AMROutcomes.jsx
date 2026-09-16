@@ -71,7 +71,7 @@ export default function AMROutcomes() {
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
+    <section id="amr-projects" className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
         {/* Section Header Grid */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">

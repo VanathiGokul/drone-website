@@ -1,7 +1,7 @@
 import React from 'react';
 import cavinLogo from '../assets/cavin_logo.svg';
 
-export default function Navbar({ onNavigate, onOpenContact }) {
+export default function Navbar({ activeSection, onNavigate, onOpenContact }) {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#121418]/90 backdrop-blur-md border-b border-white/[0.04] transition-all duration-300">
       <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px] h-[88px] lg:h-[100px] flex items-center justify-between">
@@ -14,22 +14,66 @@ export default function Navbar({ onNavigate, onOpenContact }) {
           />
         </a>
 
-        {/* Center Nav Links - Hover-only highlight */}
-        <nav className="flex items-center gap-8 sm:gap-12 lg:gap-[60px]">
+        {/* Center Nav Links */}
+        <nav className="flex items-center gap-5 sm:gap-8 lg:gap-10 xl:gap-12">
           <button
             onClick={() => onNavigate('drone')}
-            className="group relative py-1 font-space text-[16px] lg:text-[18px] leading-[23px] font-normal text-[#A9A9A9] hover:text-[#EC8922] transition-colors duration-200 cursor-pointer"
+            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+              activeSection === 'drone' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
+            }`}
           >
             Drone
-            <span className="absolute bottom-0 left-0 w-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 group-hover:w-full" />
+            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
+              activeSection === 'drone' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`} />
+          </button>
+
+          <button
+            onClick={() => onNavigate('drone-projects')}
+            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+              activeSection === 'drone-projects' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
+            }`}
+          >
+            Drone Projects
+            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
+              activeSection === 'drone-projects' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`} />
           </button>
 
           <button
             onClick={() => onNavigate('amr')}
-            className="group relative py-1 font-space text-[16px] lg:text-[18px] leading-[23px] font-normal text-[#A9A9A9] hover:text-[#EC8922] transition-colors duration-200 cursor-pointer"
+            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+              activeSection === 'amr' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
+            }`}
           >
             AMR
-            <span className="absolute bottom-0 left-0 w-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 group-hover:w-full" />
+            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
+              activeSection === 'amr' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`} />
+          </button>
+
+          <button
+            onClick={() => onNavigate('amr-projects')}
+            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+              activeSection === 'amr-projects' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
+            }`}
+          >
+            AMR Projects
+            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
+              activeSection === 'amr-projects' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`} />
+          </button>
+
+          <button
+            onClick={() => onNavigate('footer')}
+            className={`group relative py-1 font-space text-[14px] sm:text-[16px] lg:text-[18px] leading-[23px] font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+              activeSection === 'footer' ? 'text-[#EC8922]' : 'text-[#A9A9A9] hover:text-[#EC8922]'
+            }`}
+          >
+            Footer
+            <span className={`absolute bottom-0 left-0 h-[0.6px] bg-[#EC8922] transition-all duration-300 ${
+              activeSection === 'footer' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`} />
           </button>
         </nav>
 

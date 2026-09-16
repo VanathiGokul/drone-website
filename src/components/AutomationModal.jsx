@@ -194,7 +194,7 @@ export default function AutomationModal({ isOpen, onClose }) {
               {/* Header Title */}
               <div>
                 <h2 id="automation-modal-title" className="font-orbitron font-bold text-2xl text-white tracking-wide">
-                  Let's Talk Automation
+                  Let's Talk
                 </h2>
                 <p className="font-space text-xs sm:text-sm text-[#7A7A85] mt-1 font-normal">
                   Connect with our robotics engineers to engineer your deployment.

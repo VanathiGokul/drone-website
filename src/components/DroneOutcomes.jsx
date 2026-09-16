@@ -1,8 +1,8 @@
 import React from 'react';
 import droneOutcomeDesign from '../assets/drone_outcome_design.jpg';
-import droneOutcomeLqr from '../assets/drone_outcome_lqr.png';
+import droneOutcomeAds from '../assets/drone_outcome_ads.png';
 import droneOutcomeTethered from '../assets/drone_outcome_tethered.jpg';
-import droneOutcomeTuning from '../assets/drone_outcome_tuning.png';
+import droneOutcomeLqr from '../assets/drone_outcome_lqr.png';
 import droneOutcomeLidar from '../assets/drone_outcome_lidar.jpg';
 import droneOutcomeFirefighting from '../assets/drone_outcome_firefighting.png';
 
@@ -19,10 +19,10 @@ export default function DroneOutcomes() {
       ],
     },
     {
-      title: 'LQR',
-      image: droneOutcomeLqr,
+      title: 'ADS DISPLAY DRONE',
+      image: droneOutcomeAds,
       imageFit: 'object-cover',
-      description: 'LQR control enables drones to maintain precise, stable flight by continuously optimizing movement, reducing disturbances, and improving responsiveness for safer, smoother, and more reliable autonomous operations.',
+      description: 'Advertising display drones transform the sky into a dynamic digital canvas, delivering high-visibility LED campaigns, branded messages, and immersive aerial experiences that capture attention across large audiences.',
       badges: [
         { label: 'STATUS', value: 'Research Stage', highlight: true },
         { label: 'PHASE', value: 'Phase 2', highlight: false },
@@ -40,8 +40,9 @@ export default function DroneOutcomes() {
       ],
     },
     {
-      title: 'DRONE TUNNING',
-      image: droneOutcomeTuning,
+      title: 'DRONE TUNING',
+      image: droneOutcomeLqr,
+      imageFit: 'object-cover',
       description: 'Drone tuning optimizes flight controllers, motors, sensors, and response parameters to improve stability, precision, responsiveness, and efficiency, ensuring smoother performance across different payloads, environments, and mission requirements.',
       badges: [
         { label: 'STATUS', value: 'Research Stage', highlight: true },
@@ -72,7 +73,7 @@ export default function DroneOutcomes() {
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
+    <section id="drone-projects" className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
         {/* Section Header Grid */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">

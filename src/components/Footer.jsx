@@ -3,7 +3,7 @@ import cavinLogo from '../assets/cavin_logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="relative w-full border-t border-white/[0.04] bg-[#0D0E10] overflow-hidden">
+    <footer id="footer" className="relative w-full border-t border-white/[0.04] bg-[#0D0E10] overflow-hidden">
       {/* Top Center Glow Ellipse (26:366) - w: 780px, h: 11px, fill: #D9D9D9, blur(140px) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[780px] h-[11px] bg-[#D9D9D9] blur-[140px] pointer-events-none opacity-40" />
 
