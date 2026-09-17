@@ -11,7 +11,7 @@ export default function AMROutcomes() {
     {
       title: 'AGV',
       image: amrOutcomeAgv,
-      description: 'AGV technology enables reliable point-to-point material movement along predefined routes, improving transport efficiency, reducing manual handling, and supporting consistent operations across warehouses, factories, and industrial facilities.',
+      description: 'AGV technology enables reliable point to point material movement along predefined routes, improving transport efficiency, reducing manual handling, and supporting consistent operations across warehouses, factories, and industrial facilities.',
       badges: [
         { label: 'STATUS', value: 'Research Stage', highlight: true },
         { label: 'PHASE', value: 'Phase 1', highlight: false },
@@ -41,7 +41,7 @@ export default function AMROutcomes() {
     {
       title: 'SECURITY BOT',
       image: amrOutcomeSecurity,
-      description: 'Security bots autonomously patrol facilities, detect unusual activity, monitor restricted zones, and provide real-time alerts, improving site visibility, response speed, and safety while reducing continuous manual surveillance.',
+      description: 'Security bots autonomously patrol facilities, detect unusual activity, monitor restricted zones, and provide real time alerts, improving site visibility, response speed, and safety while reducing continuous manual surveillance.',
       badges: [
         { label: 'STATUS', value: 'Research Stage', highlight: true },
         { label: 'PHASE', value: 'Phase 2', highlight: false },
@@ -71,8 +71,8 @@ export default function AMROutcomes() {
   ];
 
   return (
-    <section id="amr-projects" className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
+    <section id="amr-projects" className="relative w-full py-8 lg:py-[90px] overflow-hidden scroll-mt-[76px] sm:scroll-mt-[88px] lg:scroll-mt-[100px]">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-12 lg:px-[160px]">
         {/* Section Header Grid */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
           <div>
@@ -94,9 +94,9 @@ export default function AMROutcomes() {
           </div>
 
           <div className="max-w-[768px] w-full lg:ml-auto lg:text-right">
-            <p className="font-space text-base sm:text-lg text-[#A9A9A9] leading-relaxed font-normal lg:text-right">
-              Our in-house AMR team builds autonomy, AI-driven missions, and<br className="hidden lg:block" />
-              multi-robot coordination, enabling intelligent assistants to welcome, guide,<br className="hidden lg:block" />
+            <p className="font-space text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#A9A9A9] font-normal lg:text-right">
+              Our in-house AMR team builds autonomy, AI driven missions, and<br className="hidden lg:block" />
+              multi robot coordination, enabling intelligent assistants to welcome, guide,<br className="hidden lg:block" />
               support, and serve visitors reliably across dynamic facilities.
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function AMROutcomes() {
               className="group rounded-2xl overflow-hidden border border-white/[0.07] bg-[#0E0E10] flex flex-col transition-all duration-300 hover:border-[#EC8922]/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
             >
               {/* Image Banner */}
-              <div className="relative w-full h-[280px] sm:h-[360px] overflow-hidden bg-black/40 flex items-center justify-center p-4">
+              <div className="relative w-full h-[280px] sm:h-[360px] overflow-hidden bg-black/40 flex items-center justify-center p-3 lg:p-4">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -122,18 +122,18 @@ export default function AMROutcomes() {
               </div>
 
               {/* Card Body */}
-              <div className="p-8 sm:p-10 lg:p-[40px] flex-1 flex flex-col justify-between">
+              <div className="p-3 sm:p-10 lg:p-[40px] flex-1 flex flex-col justify-start lg:justify-between">
                 <div>
-                  <h3 className="font-orbitron font-bold text-2xl sm:text-[28px] sm:leading-[32px] text-[#D5D5D5] mb-6">
+                  <h3 className="font-orbitron font-bold text-[18px] sm:text-2xl lg:text-[28px] leading-tight lg:leading-[32px] text-[#D5D5D5] mb-4 lg:mb-6">
                     {item.title}
                   </h3>
-                  <p className="font-space text-sm sm:text-base lg:text-[16px] lg:leading-[24px] text-[#A9A9A9] leading-relaxed mb-8 font-light">
+                  <p className="font-space text-sm sm:text-base lg:text-[16px] lg:leading-[24px] text-[#9A9AA5] leading-relaxed mb-4 lg:mb-8 font-light">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Status Badges Group */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:pt-2">
                   {item.badges.map((badge, bIdx) => (
                     <div
                       key={bIdx}
@@ -150,7 +150,7 @@ export default function AMROutcomes() {
                       >
                         {badge.label}
                       </span>
-                      <span className="font-space text-xs sm:text-sm text-[#D5D5D5] font-normal leading-tight">
+                      <span className="font-space text-[14px] sm:text-xs lg:text-sm text-[#D5D5D5] font-normal leading-tight">
                         {badge.value}
                       </span>
                     </div>

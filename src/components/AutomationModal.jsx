@@ -157,34 +157,49 @@ export default function AutomationModal({ isOpen, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Left Visual Brand Pillar */}
-        <div className="relative md:w-[280px] lg:w-[320px] bg-gradient-to-b from-[#18191E] to-[#0A0A0B] p-6 sm:p-8 flex flex-col justify-between overflow-hidden border-b md:border-b-0 md:border-r border-white/[0.06] shrink-0">
+        <div className="relative md:w-[280px] lg:w-[320px] bg-gradient-to-b from-[#18191E] to-[#0A0A0B] p-3.5 sm:p-5 md:p-8 flex flex-col justify-between overflow-hidden border-b md:border-b-0 md:border-r border-white/[0.06] shrink-0">
           {/* Subtle Ambient Glow Effects */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-[#EC8922]/15 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#3B82F6]/10 rounded-full blur-2xl pointer-events-none" />
 
-          {/* Top Brand Tag */}
+          {/* Top Brand Tag Header (Logo Left, Close Button Right on mobile) */}
           <div className="relative z-10">
-            <img 
-              src={cavinLogo} 
-              alt="Cavin Infotech Logo" 
-              className="w-[90px] h-auto object-contain mb-6 opacity-90"
-            />
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#EC8922] animate-pulse" />
-              <span className="font-space text-[11px] uppercase tracking-wider text-[#A9A9A9] font-medium">Next-Gen Autonomous</span>
+            <div className="flex items-center justify-between w-full mb-2.5 sm:mb-4 md:mb-6">
+              <img 
+                src={cavinLogo} 
+                alt="Cavin Infotech Logo" 
+                className="w-[68px] sm:w-[78px] md:w-[90px] h-auto object-contain opacity-90"
+              />
+
+              {/* Mobile-only Close Button aligned to the right side of the logo */}
+              <button 
+                type="button"
+                onClick={resetAndClose}
+                className="md:hidden w-8 h-8 rounded-full bg-white/[0.05] border border-white/[0.08] text-[#A9A9A9] hover:text-white hover:bg-white/[0.1] flex items-center justify-center transition-colors cursor-pointer"
+                aria-label="Close Modal"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <h3 className="font-orbitron font-bold text-xl lg:text-2xl text-white uppercase tracking-wide leading-tight">
-              Scale With <br />
+
+            <div className="inline-flex items-center gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-white/[0.04] border border-white/[0.08] mb-1.5 sm:mb-3 md:mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#EC8922] animate-pulse" />
+              <span className="font-space text-[10px] sm:text-[11px] uppercase tracking-wider text-[#A9A9A9] font-medium">Next Gen Autonomous</span>
+            </div>
+            <h3 className="font-orbitron font-bold text-[20px] leading-tight md:text-xl lg:text-2xl text-white uppercase tracking-wide">
+              Scale With <br className="hidden md:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EC8922] to-[#F59E0B]">
                 Intelligent Fleet
               </span>
             </h3>
           </div>
 
-          {/* Feature Badge / Tagline Card */}
-          <div className="relative z-10 mt-8 md:mt-0 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm">
+          {/* Feature Badge / Tagline Card (Desktop only to minimize vertical height on mobile) */}
+          <div className="hidden md:block relative z-10 mt-8 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm">
             <p className="font-space text-xs text-[#A9A9A9] leading-relaxed">
-              Custom-built Drone surveillance & AMR floor automation validated on real industrial grounds.
+              Custom built Drone surveillance & AMR floor automation validated on real industrial grounds.
             </p>
             <div className="mt-3 flex items-center justify-between text-[11px] font-space text-[#7A7A85]">
               <span>Response Time</span>
@@ -194,11 +209,12 @@ export default function AutomationModal({ isOpen, onClose }) {
         </div>
 
         {/* Right Form Area */}
-        <div className="flex-1 p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative bg-[#0E0E10]">
-          {/* Close Button */}
+        <div className="flex-1 p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between relative bg-[#0E0E10]">
+          {/* Close Button (Desktop Only) */}
           <button 
+            type="button"
             onClick={resetAndClose}
-            className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#A9A9A9] hover:text-white hover:bg-white/[0.08] flex items-center justify-center transition-colors cursor-pointer"
+            className="hidden md:flex absolute top-5 right-5 w-8 h-8 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#A9A9A9] hover:text-white hover:bg-white/[0.08] items-center justify-center transition-colors cursor-pointer"
             aria-label="Close Modal"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -207,13 +223,13 @@ export default function AutomationModal({ isOpen, onClose }) {
           </button>
 
           {!submitted ? (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5" noValidate>
               {/* Header Title */}
               <div>
-                <h2 id="automation-modal-title" className="font-orbitron font-bold text-2xl text-white tracking-wide">
+                <h2 id="automation-modal-title" className="font-orbitron font-bold text-xl sm:text-2xl text-white tracking-wide">
                   Let's Talk
                 </h2>
-                <p className="font-space text-xs sm:text-sm text-[#7A7A85] mt-1 font-normal">
+                <p className="font-space text-xs sm:text-sm text-[#7A7A85] mt-0.5 sm:mt-1 font-normal">
                   Connect with our robotics engineers to engineer your deployment.
                 </p>
               </div>
@@ -248,20 +264,23 @@ export default function AutomationModal({ isOpen, onClose }) {
                   Interested In
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {['Drone', 'AMR', 'Both'].map((option) => (
-                    <button
-                      type="button"
-                      key={option}
-                      onClick={() => setFormData({ ...formData, interestedIn: option })}
-                      className={`py-2.5 px-3 rounded-lg font-space text-xs sm:text-sm font-medium transition-all duration-200 border text-center cursor-pointer ${
-                        formData.interestedIn === option
-                          ? 'bg-[#EC8922]/10 border-[#EC8922] text-[#EC8922] shadow-[0_0_15px_rgba(236,137,34,0.15)]'
-                          : 'bg-white/[0.02] border-white/[0.06] text-[#7A7A85] hover:border-white/[0.15] hover:text-white'
-                      }`}
-                    >
-                      {option === 'Both' ? 'Drone & AMR' : option}
-                    </button>
-                  ))}
+                  {['Drone', 'AMR', 'Both'].map((option) => {
+                    const isSelected = formData.interestedIn === option;
+                    return (
+                      <button
+                        type="button"
+                        key={option}
+                        onClick={() => setFormData({ ...formData, interestedIn: option })}
+                        className={`py-2.5 px-2 sm:px-3 rounded-lg font-space text-[14px] sm:text-xs md:text-sm font-medium transition-all duration-200 border text-center cursor-pointer flex items-center justify-center ${
+                          isSelected
+                            ? 'bg-[#EC8922]/10 border-[#EC8922] text-[#EC8922] shadow-[0_0_15px_rgba(236,137,34,0.15)] font-semibold'
+                            : 'bg-white/[0.02] border-white/[0.06] text-[#A0A0AA] hover:border-white/[0.15] hover:text-white'
+                        }`}
+                      >
+                        <span className="leading-tight">{option === 'Both' ? 'Drone & AMR' : option}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 

@@ -8,19 +8,19 @@ export default function AMRResearch() {
       id: '01',
       title: 'Site Secure',
       icon: iconAmrSiteSecure,
-      description: 'Built on ROS2, our AMRs run AI-enhanced mission and task handling - planning routes, executing patrols, and accomplishing security missions independently or in coordinated joint operations. One coordinated system maintains constant environmental awareness, sharing detections across the fleet in real time.',
+      description: 'Built on ROS2, our AMRs run AI enhanced mission and task handling, planning routes, executing patrols, and accomplishing security missions independently or in coordinated joint operations. One coordinated system maintains constant environmental awareness, sharing detections across the fleet in real time.',
     },
     {
       id: '02',
       title: 'Indoor AI Assistant',
       icon: iconIndoorAssistant,
-      description: 'Engineering a Smart AI self-companion assistant: vision-language AI on an autonomous platform that converses naturally, navigates crowded spaces with full environmental awareness, and handles visitor and facility tasks - working standalone or joining joint missions alongside the security fleet and Cavin drones.',
+      description: 'Engineering a Smart AI companion assistant: vision language AI on an autonomous platform that converses naturally, navigates crowded spaces with full environmental awareness, and handles visitor and facility tasks, working standalone or joining joint missions alongside the security fleet and Cavin drones.',
     },
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
+    <section className="relative w-full py-8 lg:py-[90px] overflow-hidden">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-12 lg:px-[160px]">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-3 mb-4 justify-center">
@@ -40,9 +40,9 @@ export default function AMRResearch() {
             AMR Research
           </h2>
 
-          <p className="font-space text-base sm:text-lg text-[#9A9AA5] max-w-4xl mx-auto leading-relaxed font-normal text-center">
-            Our ground-robotics team discovers, builds, and implements the full stack in-house -<br className="hidden md:block" />
-            ROS2-based autonomy, AI-enhanced mission handling, and multi-robot coordination - proving<br className="hidden md:block" />
+          <p className="font-space text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#9A9AA5] max-w-4xl mx-auto font-normal text-center">
+            Our ground robotics team discovers, builds, and implements the full stack in house,
+            ROS2 based autonomy, AI enhanced mission handling, and multi robot coordination, proving
             every system in live facilities before it enters yours
           </p>
         </div>

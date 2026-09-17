@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function ExecutiveCTA() {
   return (
-    <section id="contact" className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
+    <section id="contact" className="relative w-full py-8 lg:py-[90px] overflow-hidden">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-12 lg:px-[160px]">
         <div className="flex flex-col items-center text-center gap-6 max-w-4xl mx-auto">
           <p className="font-space font-normal text-[11px] leading-[16.5px] tracking-[0.2em] uppercase text-[#7A7A85] max-w-3xl">
-            BOOK A 30-MINUTE EXECUTIVE BRIEFING. WE'LL WALK YOU THROUGH THE TECHNOLOGY, THE ROLLOUT PLAN, AND THE BUSINESS CASE - THEN SHOW YOU A LIVE DEMO BUILT AROUND YOUR FACILITY. CTA: BOOK AN EXECUTIVE DEMO
+            BOOK A 30 MINUTE EXECUTIVE BRIEFING. WE'LL WALK YOU THROUGH THE TECHNOLOGY, THE ROLLOUT PLAN, AND THE BUSINESS CASE, THEN SHOW YOU A LIVE DEMO BUILT AROUND YOUR FACILITY. CTA: BOOK AN EXECUTIVE DEMO
           </p>
 
           <a

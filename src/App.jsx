@@ -19,9 +19,15 @@ export default function App() {
     setActiveSection(section);
     const element = document.getElementById(section);
     if (element) {
-      const yOffset = -90; // account for sticky header
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      const navHeader = document.querySelector('header');
+      const navHeight = navHeader ? navHeader.offsetHeight : (window.innerWidth < 640 ? 76 : window.innerWidth < 1024 ? 88 : 100);
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const targetScroll = elementPosition - navHeight;
+
+      window.scrollTo({
+        top: Math.max(0, targetScroll),
+        behavior: 'smooth'
+      });
     }
   };
 

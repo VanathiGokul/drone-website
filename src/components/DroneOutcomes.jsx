@@ -73,10 +73,10 @@ export default function DroneOutcomes() {
   ];
 
   return (
-    <section id="drone-projects" className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
+    <section id="drone-projects" className="relative w-full py-8 lg:py-[90px] overflow-hidden scroll-mt-[76px] sm:scroll-mt-[88px] lg:scroll-mt-[100px]">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-12 lg:px-[160px]">
         {/* Section Header Grid */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-4 lg:mb-16">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="font-space font-medium text-sm sm:text-base text-[#EC8922]">1.1</span>
@@ -96,7 +96,7 @@ export default function DroneOutcomes() {
           </div>
 
           <div className="max-w-[768px] w-full lg:ml-auto lg:text-right">
-            <p className="font-space text-base sm:text-lg text-[#A9A9A9] leading-relaxed font-normal lg:text-right">
+            <p className="font-space text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#A9A9A9] font-normal lg:text-right">
               Nothing here stays theoretical. Our engineers continuously discover, engineer,<br className="hidden lg:block" />
               field-test, and deploy technologies in real industrial environments before they<br className="hidden lg:block" />
               reach your site. Every innovation is validated through pilot deployments,<br className="hidden lg:block" />
@@ -113,7 +113,7 @@ export default function DroneOutcomes() {
               className="group rounded-2xl overflow-hidden border border-white/[0.07] bg-[#0E0E10] flex flex-col transition-all duration-300 hover:border-[#EC8922]/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
             >
               {/* Image Banner */}
-              <div className="relative w-full h-[280px] sm:h-[360px] overflow-hidden bg-black/40 flex items-center justify-center p-4">
+              <div className="relative w-full h-[280px] sm:h-[360px] overflow-hidden bg-black/40 flex items-center justify-center p-3 lg:p-4">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -124,19 +124,19 @@ export default function DroneOutcomes() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-transparent to-transparent opacity-90 pointer-events-none" />
               </div>
 
-              {/* Card Body (2BBB9H) - padding: 40px */}
-              <div className="p-8 sm:p-10 lg:p-[40px] flex-1 flex flex-col justify-between">
+              {/* Card Body */}
+              <div className="p-3 sm:p-10 lg:p-[40px] flex-1 flex flex-col justify-start lg:justify-between">
                 <div>
-                  <h3 className="font-orbitron font-bold text-2xl sm:text-[28px] sm:leading-[32px] text-[#D5D5D5] mb-6">
+                  <h3 className="font-orbitron font-bold text-[18px] sm:text-2xl lg:text-[28px] leading-tight lg:leading-[32px] text-[#D5D5D5] mb-4 lg:mb-6">
                     {item.title}
                   </h3>
-                  <p className="font-space text-sm sm:text-base lg:text-[16px] lg:leading-[24px] text-[#A9A9A9] leading-relaxed mb-8 font-light">
+                  <p className="font-space text-sm sm:text-base lg:text-[16px] lg:leading-[24px] text-[#9A9AA5] leading-relaxed mb-4 lg:mb-8 font-light">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Status Badges Group */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:pt-2">
                   {item.badges.map((badge, bIdx) => (
                     <div
                       key={bIdx}
@@ -153,7 +153,7 @@ export default function DroneOutcomes() {
                       >
                         {badge.label}
                       </span>
-                      <span className="font-space text-xs sm:text-sm text-[#D5D5D5] font-normal leading-tight">
+                      <span className="font-space text-[14px] sm:text-xs lg:text-sm text-[#D5D5D5] font-normal leading-tight">
                         {badge.value}
                       </span>
                     </div>

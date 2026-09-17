@@ -9,25 +9,25 @@ export default function DroneResearch() {
       id: '01',
       title: 'Site Secure',
       icon: iconSiteSecure,
-      description: 'Engineering autonomous patrol intelligence: composite-vision AI for real-time intrusion detection, sensor-fusion tracking in low light, geo-fenced mission planning, and autonomous suspect-follow behaviour - validated in night trials across live industrial sites.',
+      description: 'Engineering autonomous patrol intelligence: composite vision AI for real time intrusion detection, sensor fusion tracking in low light, geofenced mission planning, and autonomous suspect follow behaviour, validated in night trials across live industrial sites.',
     },
     {
       id: '02',
       title: 'Fire Fighting',
       icon: iconFireFighting,
-      description: 'Building early-ignition intelligence: real-time thermal image processing and multispectral hotspot detection, wind-driven fire-dispersion modelling, and autonomous coordinated response - rehearsed in live-fire drills and industrial accident simulations.',
+      description: 'Building early ignition intelligence: real time thermal image processing and multispectral hotspot detection, wind driven fire dispersion modelling, and autonomous coordinated response, rehearsed in live fire drills and industrial accident simulations.',
     },
     {
       id: '03',
       title: '3D Map',
       icon: icon3dMap,
-      description: 'Implementing 3D LiDAR scanning with autonomous AI mission accomplishing - drones that plan, fly, and complete mapping missions on their own - fusing LiDAR point clouds with thermal and photogrammetric imagery into digital twins.',
+      description: 'Implementing 3D LiDAR scanning with autonomous AI mission accomplishing, drones that plan, fly, and complete mapping missions on their own, fusing LiDAR point clouds with thermal and photogrammetric imagery into digital twins.',
     },
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-[90px] overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-[160px]">
+    <section className="relative w-full py-8 lg:py-[90px] overflow-hidden">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-12 lg:px-[160px]">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-3 mb-4 justify-center">
@@ -47,7 +47,7 @@ export default function DroneResearch() {
             Our Research
           </h2>
 
-          <p className="font-space text-base sm:text-lg text-[#9A9AA5] max-w-4xl mx-auto leading-relaxed font-normal text-center">
+          <p className="font-space text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#9A9AA5] max-w-4xl mx-auto font-normal text-center">
             Nothing on this page is a concept. Our engineers discover, build, and field-prove every<br className="hidden md:block" />
             technology in live industrial conditions before it reaches your site - a continuous loop&nbsp;of<br className="hidden md:block" />
             <span className="text-white font-semibold">Discover → Engineer → Field-test → Deploy.</span>

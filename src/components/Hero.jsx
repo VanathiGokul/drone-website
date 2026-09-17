@@ -5,13 +5,13 @@ import heroAmr from '../assets/hero_amr.webp';
 export default function Hero() {
   return (
     <section className="relative w-full bg-[#121418] overflow-hidden flex flex-col justify-between">
-      {/* Background Atmosphere Blur Ellipse 1 (26:24) - x: 651px, y: -342px, w: 1673.73px, h: 1263.13px, fill: #969BA7, blur(500px) */}
+      {/* Background Atmosphere Blur Ellipse 1 (26:24) */}
       <div 
         className="absolute left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-[651px] top-[-342px] w-[900px] xl:w-[1673.73px] h-[600px] xl:h-[1263.13px] bg-[#969BA7] rounded-full blur-[160px] xl:blur-[500px] opacity-30 pointer-events-none z-0"
       />
 
-      <div className="max-w-[1920px] w-full mx-auto relative z-10 px-6 sm:px-12 lg:px-[160px] flex flex-col justify-between flex-1">
-        {/* Main Headline (26:26) - Orbitron Bold 88px, line-height 120px, uppercase, center, linear-gradient(#CAC8C8 15%, #6B6A6A 83%) */}
+      <div className="max-w-[1920px] w-full mx-auto relative z-10 px-5 sm:px-12 lg:px-[160px] flex flex-col justify-between flex-1">
+        {/* Main Headline (26:26) */}
         <div className="pt-6 sm:pt-10 xl:pt-[44px] pb-2 text-center max-w-[1600px] mx-auto">
           <h1 
             className="font-orbitron font-bold text-[32px] sm:text-[50px] md:text-[66px] xl:text-[88px] leading-[1.12] xl:leading-[116px] uppercase tracking-normal"
@@ -23,6 +23,11 @@ export default function Hero() {
           >
             Autonomous Innovation<br className="hidden sm:inline" /> Across Air & Ground
           </h1>
+
+          {/* Mobile-only Mission statement under H1 */}
+          <p className="lg:hidden mt-4 font-space font-normal text-center text-[15px] sm:text-[16px] leading-[22px] text-[#A9A9A9] max-w-[600px] mx-auto">
+            We tinker intelligent drones and autonomous mobile robots that secure, survey, and support your most critical operations, putting real time intelligence in front of leadership 24/7
+          </p>
         </div>
 
         {/* Hero Visual Showcase + Mission Statement Grid - Anchored Flush to Bottom */}
@@ -56,10 +61,10 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column Mission Statement (26:33) - Space Grotesk Regular 20px, line-height 28px, color #A9A9A9, max-width 556px, top-aligned with Drone */}
-          <div className="lg:col-span-4 flex flex-col justify-start items-end self-start pt-4 sm:pt-6 lg:pt-8 xl:pt-10 xl:pl-4">
+          {/* Right Column Mission Statement (Desktop >= lg) */}
+          <div className="hidden lg:flex lg:col-span-4 flex-col justify-start items-end self-start pt-4 sm:pt-6 lg:pt-8 xl:pt-10 xl:pl-4">
             <p className="font-space font-normal text-right text-[16px] sm:text-[18px] xl:text-[20px] leading-[26px] xl:leading-[28px] text-[#A9A9A9] max-w-[556px]">
-              We tinker intelligent drones and autonomous mobile robots that secure, survey, and support your most critical operations, putting real-time intelligence in front of leadership 24/7
+              We tinker intelligent drones and autonomous mobile robots that secure, survey, and support your most critical operations, putting real time intelligence in front of leadership 24/7
             </p>
           </div>
         </div>
